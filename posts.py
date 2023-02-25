@@ -3,6 +3,7 @@ from flask_restful import Resource, reqparse
 from marshmallow import Schema, fields
 from db import get_database
 from users import get_name, get_user_by_auth
+from typing import List
 
 class GetPostsQuerySchema(Schema):
     page = fields.Number(required=True)
@@ -63,7 +64,7 @@ class Exercise():
         }
 
 class Post():
-    def __init__(self, post_id: int, creator_id: int, title, training: list[Exercise], likes: int = 0, is_liked: bool = False, **args):
+    def __init__(self, post_id: int, creator_id: int, title, training: List[Exercise], likes: int = 0, is_liked: bool = False, **args):
         self.creator = creator_id
         self.post_id = post_id
         self.title = title
