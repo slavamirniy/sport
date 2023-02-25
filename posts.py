@@ -63,7 +63,7 @@ class Exercise():
         }
 
 class Post():
-    def __init__(self, post_id: int | None, creator_id: int, title, training: list[Exercise], likes: int | None = 0, is_liked: bool | None = False, **args) -> None:
+    def __init__(self, post_id: int, creator_id: int, title, training: list[Exercise], likes: int = 0, is_liked: bool = False, **args) -> None:
         self.creator = creator_id
         self.post_id = post_id
         self.title = title
