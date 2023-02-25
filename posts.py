@@ -50,7 +50,7 @@ class PostsQuery(Resource):
         return {"ok": 1, "post_id": p.post_id}
     
 class Exercise():
-    def __init__(self, exercise_id, repeats: int|None = None, time: int|None = None) -> None:
+    def __init__(self, exercise_id, repeats: int | None = None, time: int | None = None) -> None:
         self.exercise_id = exercise_id
         self.repeats = repeats
         self.time = time
